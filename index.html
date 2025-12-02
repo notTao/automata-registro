@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizador Sintáctico de Registro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Analizador Sintáctico de Registro</h1>
+    <p style="text-align:center; margin-bottom: 20px;">Escribe tu código abajo. La validación es automática.</p>
+    
+    <div class="editor-container">
+        <textarea id="codeInput" placeholder="Escribe el código aquí...&#10;Ejemplo:&#10;REGISTER {s=start};&#10;CREATE_ACCOUNT {k=new};&#10;..." spellcheck="false"></textarea>
+    </div>
+
+    <div id="status-box" class="status-idle">Esperando entrada...</div>
+
+    <div class="legend">
+        <strong>Tabla de Errores:</strong><br>
+        <span class="error-code">E1:</span> Espacio | 
+        <span class="error-code">E2:</span> Carácter esperado | 
+        <span class="error-code">E3:</span> Falta apertura { [ ( | 
+        <span class="error-code">E4:</span> Falta cierre } ] ) | 
+        <span class="error-code">E5:</span> Inicio inválido | 
+        <span class="error-code">E6:</span> Sintaxis/Flujo
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
